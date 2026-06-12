@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeSearch</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <nav class="nav">
+      <div class="nav-inner">
+        <span class="nav-logo">PokeSearch</span>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#pokedex">Search</a></li>
+          <li><a href="#favorites">Favorites</a></li>
+        </ul>
+        <button class="burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero section with parallax background -->
+    <section class="hero">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">PokeSearch</h1>
+        <p class="hero-sub">Explore the world of Pokémon</p>
+      </div>
+    </section>
+
+    <!-- Search bar and type filters -->
+    <section class="controls" id="pokedex">
+      <input type="text" id="searchInput" placeholder="Search a Pokémon..." class="search-input">
+      <div class="type-filters" id="typeFilters"></div>
+    </section>
+
+    <!-- Pokémon card grid -->
+    <main class="grid" id="pokemonGrid"></main>
+
+    <div class="load-more-wrapper">
+      <button id="loadMore" class="btn-load">Load more</button>
+    </div>
+
+    <!-- Detail modal -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+        <button class="modal-close" id="modalClose">✕</button>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <!-- Favorites section -->
+    <section class="favoris-section" id="favorites">
+      <h2 class="section-title">My Favorites</h2>
+      <div class="grid" id="favoritesGrid"></div>
+      <p class="no-fav" id="noFav">No favorites yet.</p>
+    </section>
+
+    <footer class="footer">PokeSearch — PokéAPI data ・ Hochadamas</footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
